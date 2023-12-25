@@ -2,12 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .heading {
-    @apply text-4xl md:text-5xl font-semibold text-darkGrayishBlue;
+@layer base {
+  h2 {
+    @apply text-3xl md:text-5xl font-semibold text-darkGrayishBlue;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl font-semibold text-darkGrayishBlue;
   }
 
-  .btn {
-    @apply px-8 py-4 w-full md:w-auto rounded-full text-white text-xl shadow-lg hover:bg-opacity-80 duration-200;
+  h4 {
+    @apply text-darkGrayishBlue text-2xl font-semibold my-2;
   }
+
+  button {
+    @apply px-8 py-4 w-full md:w-auto rounded-full text-white text-lg font-bold shadow-lg hover:bg-opacity-80 duration-200;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto text-center;
+  }
+
+  .section-info {
+    @apply max-w-3xl mt-8 mb-12 mx-auto text-grayishBlue;
+  }
+
+  .item-info {
+    @apply text-grayishBlue leading-7 max-w-md;
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%); 
 }
